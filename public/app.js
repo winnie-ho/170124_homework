@@ -10,11 +10,16 @@ var initialize = function(){
   var bpMarker = mainMap.addMarker(buckinghamPalace);
   var tateModernMarker = mainMap.addMarker(tateModern);
 
+
+  var bpInfo = "Buckingham Palace - where the queen lives!"
+  var centreInfo = "London City Centre"
+  var tateModernInfo = "Tate Modern Art Gallery"
+
   mainMap.addClickEvent();
 
-  mainMap.addInfoWindow(mainMap, bpMarker);
-  mainMap.addInfoWindow(mainMap, centreMarker);
-  mainMap.addInfoWindow(mainMap, tateModernMarker);
+  mainMap.addInfoWindow(mainMap, bpMarker, bpInfo);
+  mainMap.addInfoWindow(mainMap, centreMarker, centreInfo);
+  mainMap.addInfoWindow(mainMap, tateModernMarker, tateModernInfo);
 
 
 }

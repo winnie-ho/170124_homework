@@ -1,4 +1,3 @@
-contentString = "Interesting information about London Places"
 
 
 var MapWrapper = function(container, coords, zoom) {
@@ -33,9 +32,9 @@ MapWrapper.prototype = {
     }.bind(this));
   },
 
-  addInfoWindow: function(map, marker){
+  addInfoWindow: function(map, marker, contentString){
     var infoWindow = new google.maps.InfoWindow({
-          content: "Some interesting info about this place"
+          content: contentString
         });
 
       marker.addListener("click", function(){
