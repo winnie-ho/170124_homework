@@ -6,6 +6,11 @@ var MapWrapper = function(container, coords, zoom) {
     center: coords,
     zoom: zoom
     });
+
+  var searchButton = document.querySelector("button");
+  searchButton.onclick =  this.addEdinburghButtonClick;
+
+
 }
 
 MapWrapper.prototype = {
@@ -24,7 +29,7 @@ MapWrapper.prototype = {
 
       console.log(event);
 
-      console.log(event.latLng.lat(), event.latLng.lng());
+      console.log("coords selected are: " + event.latLng.lat(), event.latLng.lng());
       var coordsSelected = {lat: event.latLng.lat(), lng: event.latLng.lng()};
 
       this.addMarker(coordsSelected);
@@ -40,10 +45,15 @@ MapWrapper.prototype = {
       marker.addListener("click", function(){
       infoWindow.open(this.googleMap, marker);
     })
+  },
 
 
-
+  addEdinburghButtonClick: function(event){
+    this.googleMap.setCenter({lat: 55.9533, lng: -3.1883 });
+    console.log("Edinburgh button clicked");
+  
   }
+
 }
 
 
