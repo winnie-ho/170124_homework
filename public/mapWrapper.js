@@ -16,6 +16,7 @@ MapWrapper.prototype = {
       map: this.googleMap
     });
     console.log("marker added");
+    return marker;
   },
 
   addClickEvent: function(){
@@ -32,18 +33,12 @@ MapWrapper.prototype = {
     }.bind(this));
   },
 
-  addInfoWindow: function(coords){
-      var marker = new google.maps.Marker({
-        position: coords,
-        map: this.googleMap
-      });
-
+  addInfoWindow: function(map, marker){
     var infoWindow = new google.maps.InfoWindow({
-          content: "contentString"
+          content: "Some interesting info about this place"
         });
-    console.log("infoWindow added");
 
-    marker.addListener("click", function(){
+      marker.addListener("click", function(){
       infoWindow.open(this.googleMap, marker);
     })
 

@@ -6,14 +6,15 @@ var initialize = function(){
 
 
   var mainMap = new MapWrapper(mapDiv, centre, 12);
-  mainMap.addMarker(centre);
+  var centreMarker = mainMap.addMarker(centre);
   var bpMarker = mainMap.addMarker(buckinghamPalace);
-  mainMap.addMarker(tateModern);
+  var tateModernMarker = mainMap.addMarker(tateModern);
 
   mainMap.addClickEvent();
 
-  mainMap.addInfoWindow(buckinghamPalace);
-  // mainMap.addMarkerClickEvent(mainMap, bpMarker);
+  mainMap.addInfoWindow(mainMap, bpMarker);
+  mainMap.addInfoWindow(mainMap, centreMarker);
+  mainMap.addInfoWindow(mainMap, tateModernMarker);
 
 
 }
