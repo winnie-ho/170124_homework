@@ -3,12 +3,39 @@ body{
 }
 
 #main-map {
-  height: 500px;
-  width: 1000px;
+  height: 550px;
+  width: 100%;
   margin: auto;
 }
 
 h1{
   font-family: courier;
   text-align: center;
+}
+
+h3{
+  font-family: courier;
+  text-align: center;
+}
+
+p{
+  text-align: justify;
+}
+
+.window-div{
+  border: solid gray 1px;
+  border-radius: 2px;
+  display:flex;
+  flex-direction: column;
+  width: 200px;
+  margin: auto;
+  padding: 5px;
+  justify-content: center;
+  align-content: center;
+}
+
+img{
+
+  margin:10px;
+
 }

@@ -2,24 +2,26 @@ var initialize = function(){
   var centre = {lat: 51.5074, lng: -0.1278};
   var buckinghamPalace = {lat:51.501364, lng:-0.141890};
   var tateModern = {lat:51.507595, lng: -0.099356};
+  var leicesterSquare = {lat:51.510278, lng: -0.130278﻿};
   var mapDiv = document.querySelector("#main-map");
 
 
-  var mainMap = new MapWrapper(mapDiv, centre, 12);
-  var centreMarker = mainMap.addMarker(centre);
+  var mainMap = new MapWrapper(mapDiv, centre, 13);
   var bpMarker = mainMap.addMarker(buckinghamPalace);
   var tateModernMarker = mainMap.addMarker(tateModern);
+  var leicesterSquareMarker = mainMap.addMarker(leicesterSquare);
 
 
-  var bpInfo = "Buckingham Palace - where the queen lives!"
+  var bpInfo = '<div class = "window-div"><h3> Buckingham Palace</h3> <p>where the queen lives!</p> </br> <img height = "100px" src = "https://www.clinkhostels.com/wp-content/uploads/2014/09/Buckingham-Palace-014.jpg"</p></div>'
   var centreInfo = "London City Centre"
-  var tateModernInfo = "Tate Modern Art Gallery"
+  var tateModernInfo = '<div class = "window-div"><h3>Tate Modern Art Gallery</h3> <p>Tate Modern is a modern art gallery located in London. It is Britains national gallery of international modern art and forms part of the Tate group. </br> <img  height = "100px" src = "https://media.timeout.com/images/102272961/image.jpg"</p></div>'
+  var leicesterSquareInfo = '<div class = "window-div"><h3> Leicester Square</h3> <p> Pedestrianised square in the West End of London. It was laid out in 1670 and is named after the contemporary Leicester House, itself named after Robert Sidney, 2nd Earl of Leicester.</p> </br> <img height = "100px" src = "https://i.ytimg.com/vi/YXvB4NJaniU/maxresdefault.jpg"</p></div>'
 
   mainMap.addClickEvent();
 
   mainMap.addInfoWindow(mainMap, bpMarker, bpInfo);
-  mainMap.addInfoWindow(mainMap, centreMarker, centreInfo);
   mainMap.addInfoWindow(mainMap, tateModernMarker, tateModernInfo);
+  mainMap.addInfoWindow(mainMap, leicesterSquareMarker, leicesterSquareInfo);
 
 
 }
