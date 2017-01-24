@@ -1,0 +1,14 @@
+body{
+
+}
+
+#main-map {
+  height: 500px;
+  width: 1000px;
+  margin: auto;
+}
+
+h1{
+  font-family: courier;
+  text-align: center;
+}
