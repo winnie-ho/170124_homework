@@ -24,10 +24,10 @@ var initialize = function(){
   mainMap.addInfoWindow(mainMap, leicesterSquareMarker, leicesterSquareInfo);
 
 
-  mainMap.addEdinburghButtonClick;
-
-  
-
+  var searchButton = document.querySelector("button");
+  searchButton.onclick = function(){mainMap.googleMap.setCenter({lat: 55.9533, lng: -3.1883 });
+  console.log("Edinburgh button clicked");
+}
 }
 
 
